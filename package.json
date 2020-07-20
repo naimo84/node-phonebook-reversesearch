@@ -1,0 +1,130 @@
+{
+  "name": "phonebook-reversesearch",
+  "version": "0.0.1",
+  "description": "phonebook reversesearch utilizing dasoertliche.de an 11880.com",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node-red",
+    "test": "mocha \"test/**/*_spec.js\"",
+    "release": "standard-version",
+    "release-minor": "standard-version --release-as minor",
+    "watch": "tsc -w -p ./tsconfig.json",
+    "dev": "gulp develop",
+    "build": "gulp"
+  },
+  "keywords": [
+    "phonebook",
+    "reverse",
+    "search",
+    "node",
+    "nodejs",
+    "dasoertliche",
+    "11880"
+  ],
+  "author": "naimo84",
+  "license": "MIT",
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "axios": "^0.19.2"
+  },
+  "devDependencies": {
+    "@types/node": "^13.11.0",
+    "commitlint": "^8.3.5",
+    "gulp": "^4.0.2",
+    "gulp-nodemon": "^2.4.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-watch": "^5.0.1",
+    "standard-version": "^7.1.0",
+    "typescript": "^3.8.3",
+    "sinon": "9.0.1",
+    "chai": "4.2.0",
+    "chai-like": "1.1.1",
+    "chai-things": "0.2.0",
+    "mocha": "7.1.1"
+  },
+  "prepublish": "tsc",
+  "bugs": {
+    "url": "https://github.com/naimo84/node-phonebook-reversesearch/issues"
+  },
+  "homepage": "https://github.com/naimo84/node-phonebook-reversesearch#readme",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint --edit"
+    }
+  },
+  "funding": {
+    "type": "paypal",
+    "url": "https://paypal.me/NeumannBenjamin"
+  },
+  "commitlint": {
+    "format": {
+      "helpUrl": "test"
+    },
+    "rules": {
+      "body-leading-blank": [
+        1,
+        "always"
+      ],
+      "footer-leading-blank": [
+        1,
+        "always"
+      ],
+      "header-max-length": [
+        2,
+        "always",
+        72
+      ],
+      "scope-case": [
+        2,
+        "always",
+        "lower-case"
+      ],
+      "subject-case": [
+        2,
+        "never",
+        [
+          "sentence-case",
+          "start-case",
+          "pascal-case",
+          "upper-case"
+        ]
+      ],
+      "subject-empty": [
+        2,
+        "never"
+      ],
+      "subject-full-stop": [
+        2,
+        "never",
+        "."
+      ],
+      "type-case": [
+        2,
+        "always",
+        "lower-case"
+      ],
+      "type-empty": [
+        2,
+        "never"
+      ],
+      "type-enum": [
+        2,
+        "always",
+        [
+          "build",
+          "chore",
+          "ci",
+          "docs",
+          "feat",
+          "fix",
+          "perf",
+          "refactor",
+          "revert",
+          "style",
+          "test"
+        ]
+      ]
+    }
+  }
+}
